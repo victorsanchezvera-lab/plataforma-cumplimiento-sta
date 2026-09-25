@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plataforma de Cumplimiento · Saving The Amazon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c2b1e; --ink-soft: #5c6b58;
+    --paper: #faf8ef; --paper-raised: #ffffff; --paper-sunken: #eef3dd;
+    --line: #dee5c9; --line-strong: #bdcb9c;
+    --accent: #6f9a1f; --accent-soft: #e9f1d1;
+    --leaf: #0d5c2e; --leaf-soft: #dcefe0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e9efe0; --ink-soft: #a9b8a1;
+      --paper: #10160e; --paper-raised: #161e13; --paper-sunken: #0c110a;
+      --line: #2b3524; --line-strong: #3d4a32;
+      --accent: #a7d24a; --accent-soft: #26310f;
+      --leaf: #8fd6a2; --leaf-soft: #173824;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--paper); }
+  body {
+    color: var(--ink); font-family: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+    font-size: 16px; line-height: 1.6; margin: 0; padding: 0 0 5rem;
+  }
+  h1, h2, h3 { font-family: "Baloo 2", ui-sans-serif, system-ui, sans-serif; font-weight: 700; color: var(--ink); margin: 0; }
+  a { color: var(--leaf); }
+  .shell { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+
+  header.top {
+    background: var(--paper-raised); border-bottom: 1px solid var(--line-strong);
+    background-image: linear-gradient(90deg, var(--leaf), var(--accent));
+    background-repeat: no-repeat; background-size: 100% 5px;
+    margin-bottom: 2.2rem;
+  }
+  header.top .inner { max-width: 1000px; margin: 0 auto; padding: 2.2rem 1.5rem 2.4rem; }
+  .brand-row { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
+  .brand-row img { height: 42px; width: auto; display: block; }
+  .eyebrow { font-family: "IBM Plex Mono", monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+  header.top h1 { font-size: 1.9rem; margin: 0.5rem 0 0.6rem; }
+  header.top p { margin: 0; color: var(--ink-soft); font-size: 1.02rem; max-width: 62ch; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.1rem; margin-bottom: 2.2rem; }
+  .tool-card {
+    background: var(--paper-raised); border: 1px solid var(--line); border-radius: 20px;
+    padding: 1.6rem 1.7rem; display: flex; flex-direction: column; gap: 0.9rem;
+    text-decoration: none; color: var(--ink); transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .tool-card:hover { border-color: var(--leaf); transform: translateY(-2px); }
+  .tool-card .icon {
+    width: 3rem; height: 3rem; border-radius: 14px; background: var(--leaf-soft);
+    display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+  }
+  .tool-card h2 { font-size: 1.2rem; }
+  .tool-card p { margin: 0; color: var(--ink-soft); font-size: 0.92rem; flex-grow: 1; }
+  .tool-card .cta { font-size: 0.88rem; font-weight: 700; color: var(--leaf); }
+  .tool-card .tag {
+    align-self: flex-start; font-family: "IBM Plex Mono", monospace; font-size: 0.68rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.04em; padding: 0.2rem 0.6rem; border-radius: 999px;
+    background: var(--accent-soft); color: var(--accent);
+  }
+
+  section.about { background: var(--paper-raised); border: 1px solid var(--line); border-radius: 20px; padding: 1.6rem 1.8rem; margin-bottom: 1.5rem; }
+  section.about h2 { font-size: 1.1rem; margin-bottom: 0.7rem; }
+  section.about p { margin: 0 0 0.7rem; font-size: 0.92rem; color: var(--ink-soft); }
+  section.about p:last-child { margin-bottom: 0; }
+  section.about b { color: var(--ink); }
+
+  footer.foot { max-width: 1000px; margin: 2.5rem auto 0; padding: 0 1.5rem; font-size: 0.8rem; color: var(--ink-soft); font-family: "IBM Plex Mono", monospace; }
+</style>
+</head>
+<body>
+
+<header class="top"><div class="inner">
+  <div class="brand-row"><img src="assets/logo.webp" alt="Saving The Amazon"></div>
+  <span class="eyebrow">Fundación · Plataforma de cumplimiento</span>
+  <h1>Vinculación de proveedores y debida diligencia</h1>
+  <p>Tres herramientas para dejar de perder tiempo en formularios repetidos y búsquedas manuales — centralizar los datos de la fundación, verificar contrapartes contra listas restrictivas, y guiar al equipo paso a paso por todo el proceso.</p>
+</div></header>
+
+<main class="shell">
+
+  <div class="grid">
+    <a class="tool-card" href="sistema-vinculacion-proveedores.html">
+      <span class="tag">Herramienta</span>
+      <div class="icon">🗂️</div>
+      <h2>Sistema de Vinculación de Proveedores</h2>
+      <p>Fuente única de datos institucionales, documentos con vigencia, ficha imprimible en PDF y seguimiento de solicitudes por cliente.</p>
+      <span class="cta">Abrir el sistema →</span>
+    </a>
+
+    <a class="tool-card" href="plataforma-debida-diligencia.html">
+      <span class="tag">Herramienta</span>
+      <div class="icon">🔍</div>
+      <h2>Plataforma de Debida Diligencia</h2>
+      <p>Registro de contrapartes, verificación de listas restrictivas (Interpol en vivo + 9 fuentes guiadas) y constancia descargable.</p>
+      <span class="cta">Abrir la plataforma →</span>
+    </a>
+
+    <a class="tool-card" href="manual-vinculacion-proveedores.html">
+      <span class="tag">Guía</span>
+      <div class="icon">📘</div>
+      <h2>Manual de uso</h2>
+      <p>Qué problema resuelve cada pestaña del Sistema de Vinculación, con el flujo de trabajo recomendado de principio a fin.</p>
+      <span class="cta">Leer el manual →</span>
+    </a>
+  </div>
+
+  <section class="about">
+    <h2>Cómo se guardan los datos</h2>
+    <p>Cada herramienta guarda su información <b>en el navegador de quien la usa</b> (almacenamiento local) — no hay un servidor central, así que los datos no viajan a ningún lado y solo existen en ese computador. Para compartir el avance entre personas, usa los botones de <b>descargar</b> (ficha, constancia) dentro de cada herramienta.</p>
+    <p>La verificación de antecedentes consulta en vivo la API pública de Interpol directamente desde el navegador — nada de eso pasa por un servidor propio tampoco.</p>
+  </section>
+
+</main>
+
+<footer class="foot">Plataforma de Cumplimiento · Saving The Amazon</footer>
+
+</body>
+</html>
